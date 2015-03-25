@@ -1,0 +1,10 @@
+<form class="form pure-form pure-form-stacked">
+  <fieldset>
+      <label>Name:</label>
+      {{ input value=model.name }}
+
+
+    <button class="button-save pure-button" {{ action "save" }}>Save</button>
+    <button class="button-cancel pure-button" {{ action "cancel" }}>Cancel</button>
+  </fieldset>
+</form>

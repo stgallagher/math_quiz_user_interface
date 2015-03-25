@@ -1,0 +1,159 @@
+/* Pure CSS styles */
+.custom-restricted-width {
+    /* To limit the menu width to the content of the menu: */
+    display: inline-block;
+    /* Or set the width explicitly: */
+    /* width: 10em; */
+}
+
+/* My styles */
+.menu-item-icon {
+  width: 20px;
+  color: darkgrey;
+  display: inline-block;
+}
+.menu-item {
+  color: darkgrey;
+  display: inline-block;
+}
+#header {
+  height: 100px;
+  background-color: darkgrey;
+  border-bottom: 1px solid black;
+}
+#content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  min-height: 500px;
+}
+#footer {
+  height: 1000px;
+  background-color: darkgrey;
+  border-top: 1px solid black;
+}
+a {
+  color: darkgrey;
+}
+a:hover {
+  color: lightgrey;
+}
+.resource-names {
+  font-weight: 800;
+  font-size: large;
+  color: darkgrey;
+  padding: 2em;
+}
+.nav {
+  margin: 10px;
+  font-size: x-large;
+}
+.data {
+}
+.info {
+}
+.image-container {
+  float: left;
+  width: 350px;
+}
+.image {
+  margin-left: 1em;
+}
+.label {
+  width: 150px;
+  color: white;
+  background-color: #3D3D3D;
+  padding: 5px;
+}
+.text {
+  text-align: center;
+  width: 150px;
+}
+.link-tos {
+  margin: 10px;
+  font-size: large;
+}
+
+/* form styles */
+.button-save {
+  background: rgb(88, 88, 88);
+  color: white;
+  margin: 1em .5em 0em;
+}
+.button-cancel {
+  background: rgb(176, 176, 176);
+  margin: 1em 0.5em 0em;
+}
+/* problems */
+.problem-set-container {
+  height: 1000px;
+}
+.problem-container {
+  float: left;
+  width: 250px;
+  display: inline-block;
+}
+.problem-set-container a {
+  color: black;
+}
+.problem-set-container a:hover {
+  color: darkgrey;
+}
+.problem-frame {
+  height: 300px;
+  width: 220px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 75px;
+  margin: 10px;
+}
+.given-problem {
+  height: 160px;
+  width: 130px;
+  margin-top: 45px;
+  margin-left: 45px;
+}
+.problem-top {
+  height: 50px;
+  width: 150px;
+  margin-left: 5px;
+  padding-top: 10px;
+}
+.problem-bottom {
+  height: 70px;
+  width: 150px;
+  margin-left: -10px;
+  padding-top: 25px;
+  border-bottom: 1px solid black;
+}
+.answer-problem {
+  height: 55px;
+  width: 190px;
+  margin-top: 5px;
+  margin-left: 15px;
+}
+.students-grid-heading {
+  text-align: center;
+  height: 30px;
+  background-color: grey;
+  color: white;
+  padding-top: 5px;
+}
+.students-grid {
+  height: 500px;
+  background: #004050
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+.student-tile {
+  width: 150px;
+  height: 20px;
+  padding: 5px;
+  background: white;
+  margin: 2px;
+  display: inline-block;
+  border: 1px solid black;
+  color: #4D4D4D;
+  font-size: medium;
+  font-style: italic;
+}

@@ -1,0 +1,15 @@
+<form class="form pure-form pure-form-stacked">
+  <fieldset>
+      <label>Level:</label>
+      {{ input value=model.level }}
+
+      <label>Operator:</label>
+      {{ input value=model.operator }}
+
+      <label>Max Time:</label>
+      {{ input value=model.maxTime }}
+
+    <button class="button-save pure-button" {{ action "save" }}>Save</button>
+    <button class="button-cancel pure-button" {{ action "cancel" }}>Cancel</button>
+  </fieldset>
+</form>

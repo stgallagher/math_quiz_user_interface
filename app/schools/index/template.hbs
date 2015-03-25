@@ -1,0 +1,17 @@
+<div class="link-tos">
+  {{link-to 'Create a new school' 'schools.new'}}
+</div>
+<table class="pure-table pure-table-striped">
+  <thead>
+    <th>Name</th>
+    <th></th>
+  </thead>
+  <tbody>
+    {{#each school in model}}
+      <tr>
+        <td class="resource-names">{{link-to school.name 'schools.show' school}}</td>
+        <td><a href="#" {{action "delete" school}}>Delete</a></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

@@ -1,3 +1,22 @@
-<h2 id="title">Welcome to Ember.js</h2>
-
-{{outlet}}
+<div id="header"></div>
+<div id="content">
+  <div class="pure-g">
+    <div class="pure-u-1-8">
+      <div class="nav pure-menu custom-restricted-width">
+        <ul class="pure-menu-list">
+          <li class="pure-menu-item"><div class="menu-item-icon fa fa-trello"></div>{{link-to "Classrooms" "classrooms" class="menu-item pure-menu-link"}}</li>
+          <li class="pure-menu-item"><div class="menu-item-icon fa fa-plus-circle"></div>{{link-to "Problems" "problems" class="menu-item pure-menu-link"}}</li>
+          <li class="pure-menu-item"><div class="menu-item-icon fa fa-ticket"></div>{{link-to "Quiz Sessions" "quizSessions" class="menu-item pure-menu-link"}}</li>
+          <li class="pure-menu-item"><div class="menu-item-icon fa fa-university"></div>{{link-to "Schools" "schools" class="menu-item pure-menu-link"}}</li>
+          <li class="pure-menu-item"><div class="menu-item-icon fa fa-graduation-cap"></div>{{link-to "Quizzes" "quizzes" class="menu-item pure-menu-link"}}</li>
+          <li class="pure-menu-item"><div class="menu-item-icon fa fa-meh-o"></div>{{link-to "Students" "students" class="menu-item pure-menu-link"}}</li>
+          <li class="pure-menu-item"><div class="menu-item-icon fa fa-user"></div>{{link-to "Teachers" "teachers" class="menu-item pure-menu-link"}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pure-u-7-8" >
+      {{outlet}}
+    </div>
+  </div>
+</div>
+<div id="footer"></div>

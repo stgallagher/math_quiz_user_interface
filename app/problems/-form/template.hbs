@@ -1,0 +1,18 @@
+<form class="form pure-form pure-form-stacked">
+  <fieldset>
+      <label>Top Factor:</label>
+      {{ input value=model.topFactor }}
+
+      <label>Bottom Factor:</label>
+      {{ input value=model.bottomFactor }}
+
+      <label>Operator:</label>
+      {{ input value=model.operator }}
+
+      <label>Answer:</label>
+      {{ input value=model.answer }}
+
+    <button class="button-save pure-button" {{ action "save" }}>Save</button>
+    <button class="button-cancel pure-button" {{ action "cancel" }}>Cancel</button>
+  </fieldset>
+</form>

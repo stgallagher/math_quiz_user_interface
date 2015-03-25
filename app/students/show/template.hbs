@@ -1,0 +1,40 @@
+<div class="pure-g">
+  <div class="pure-u-1-4"></div>
+  <div class="content pure-u-3-4">
+    <div class="image-container">
+      <div class="image">
+        <img src="/assets/images/person.png" alt="no photo available" class="w100px" />
+        <div class="link-tos">
+          {{link-to "Edit student" "students.edit" model}}
+        </div>
+        <div class="link-tos">
+          {{link-to "List of all students" "students.index"}}
+        </div>
+      </div>
+    </div>
+    <div class="data">
+      <div class="info">
+        <div>
+          <p class="label">Name</p>
+          <p class="text">{{model.fullName}}</p>
+          <p class="label">Gender</p>
+          <p class="text">{{model.gender}}</p>
+          <p class="label">Grade</p>
+          <p class="text">{{model.grade}}</p>
+          {{#with model.classroom.teacher as teacher }}
+            <p class="label">Teacher</p>
+            <p class="text">{{teacher.fullName}}</p>
+          {{/with}}
+          {{#with model.classroom as classroom }}
+            <p class="label">Classroom</p>
+            <p class="text">{{classroom.name}}</p>
+          {{/with}}
+          <p class="label">Quiz Dates</p>
+          {{#each quizSession in model.quizSessions}}
+            <p class="text">Took quiz #{{quizSession.quiz.id}} on {{quizSession.formattedDate}}</p>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

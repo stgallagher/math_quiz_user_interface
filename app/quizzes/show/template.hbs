@@ -1,0 +1,56 @@
+<div class="pure-g">
+  <div class="pure-u-1-4"></div>
+  <div class="content pure-u-3-4">
+    <div class="image-container">
+      <div class="image">
+        <img src="//style.anu.edu.au/_anu/4/images/placeholders/person.png" alt="no photo available" class="w100px" />
+        <div class="link-tos">
+          {{link-to "Edit quiz" "quizzes.edit" model}}
+        </div>
+        <div class="link-tos">
+          {{link-to "List of all quizzes" "quizzes.index"}}
+        </div>
+      </div>
+    </div>
+    <div class="data">
+      <div class="info">
+        <div>
+          <p class="label">Level</p>
+          <p class="text">{{model.level}}</p>
+          <p class="label">Operator</p>
+          <p class="text">{{model.operator}}</p>
+          <p class="label">Max Time</p>
+          <p class="text">{{model.maxTime}}</p>
+          {{#with quizSessions.firstObject as firstSession}}
+            {{#with quizSessions.lastObject as lastSession}}
+            <p class="label">Quiz Sessions</p>
+            <p class="text">From {{firstSession.id}} to {{lastSession.id}}</p>
+            {{/with}}
+          {{/with}}
+          <p class="label">Problem Size</p>
+          {{#with problems.length as plength}}
+            <p class="text">{{plength}}</p>
+          {{/with}}
+          <p class="label">Problems</p>
+          {{#each problem in model.problems}}
+            <div class="problem-container">
+              <div class="problem-frame">
+                <div class="given-problem">
+                  <div class="problem-top">
+                    {{problem.topFactor}}
+                  </div>
+                  <div class="problem-bottom">
+                    {{problem.operator}}{{problem.bottomFactor}}
+                  </div>
+                </div>
+                <div class="answer-problem">
+                    {{problem.answer}}
+                </div>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

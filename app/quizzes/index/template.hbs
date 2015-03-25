@@ -1,0 +1,26 @@
+<div class="pure-g">
+  <div class="pure-u-1-4"></div>
+  <div class="content pure-u-3-4">
+    <div class="link-tos">
+      {{link-to 'Create a new quiz' 'quizzes.new'}}
+    </div>
+    <table class="pure-table pure-table-striped">
+      <thead>
+        <th>Level</th>
+        <th>Operator</th>
+        <th>Max Time</th>
+        <th></th>
+      </thead>
+      <tbody>
+        {{#each quiz in model}}
+          <tr>
+            <td class="resource-names">{{link-to quiz.level 'quizzes.show' quiz}}</td>
+            <td class="resource-names">{{quiz.operator}}</td>
+            <td class="resource-names">{{quiz.maxTime}}</td>
+            <td><a href="#" {{action "delete" quiz}}>Delete</a></td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

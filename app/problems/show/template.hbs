@@ -1,0 +1,47 @@
+<div class="pure-g">
+  <div class="pure-u-1-8">
+    <div class="problem-container">
+      <div class="problem-frame">
+        <div class="given-problem">
+          <div class="problem-top">
+            {{model.topFactor}}
+          </div>
+          <div class="problem-bottom">
+            {{model.operator}}{{model.bottomFactor}}
+          </div>
+        </div>
+        <div class="answer-problem">
+            {{model.answer}}
+        </div>
+      </div>
+    <div class="link-tos">
+      {{link-to "Edit problem" "problems.edit" model}}
+    </div>
+    <div class="link-tos">
+      {{link-to "List of all problems" "problems.index"}}
+    </div>
+  </div>
+  </div>
+  <div class="pure-u-1-12">
+    <div class="data">
+      <div class="info">
+        <div>
+          <p class="label">Top Factor</p>
+          <p class="text">{{model.topFactor}}</p>
+          <p class="label">Bottom Factor</p>
+          <p class="text">{{model.bottomFactor}}</p>
+          <p class="label">Operator</p>
+          <p class="text">{{model.operator}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pure-u-1-12">
+    <p class="label">Answer</p>
+    <p class="text">{{model.answer}}</p>
+    <p class="label">Quizzes</p>
+    {{#each quiz in model.quizzes}}
+      <p class="text">{{link-to quiz.id "quizzes.show" quiz}}</p>
+    {{/each}}
+  </div>
+</div>

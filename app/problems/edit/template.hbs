@@ -1,0 +1,24 @@
+<div class="problem-container">
+  <div class="problem-frame">
+    <div class="given-problem">
+      <div class="problem-top">
+        {{model.topFactor}}
+      </div>
+      <div class="problem-bottom">
+        {{model.operator}}{{model.bottomFactor}}
+      </div>
+    </div>
+    <div class="answer-problem">
+        {{model.answer}}
+    </div>
+  </div>
+  <div class="link-tos">
+    {{link-to "Edit problem" "problems.edit" model}}
+  </div>
+  <div class="link-tos">
+    {{link-to "List of all problems" "problems.index"}}
+  </div>
+</div>
+<div class="data">
+  {{partial "problems/form"}}
+</div>

@@ -1,0 +1,24 @@
+<div class="link-tos">
+  {{link-to 'Create a new problem' 'problems.new'}}
+</div>
+<div class="problem-set-container">
+  {{#each problem in model}}
+    {{#link-to 'problems.show' problem}}
+      <div class="problem-container">
+        <div class="problem-frame">
+          <div class="given-problem">
+            <div class="problem-top">
+              {{problem.topFactor}}
+            </div>
+            <div class="problem-bottom">
+              {{problem.operator}}{{problem.bottomFactor}}
+            </div>
+          </div>
+          <div class="answer-problem">
+              {{problem.answer}}
+          </div>
+        </div>
+      </div>
+    {{/link-to}}
+  {{/each}}
+</div>

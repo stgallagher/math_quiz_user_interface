@@ -1,0 +1,32 @@
+<div class="pure-g">
+  <div class="pure-u-1-8">
+    <p class="label">Name:</p>
+    <p class="text">{{model.name}}</p>
+    {{#with model.students as students}}
+      <p class="label">No. of Students</p>
+      <p class="text">{{students.length}}</p>
+    {{/with}}
+  </div>
+  <div class="pure-u-1-8">
+    <p class="label">Classrooms</p>
+    {{#each classroom in model.classrooms}}
+      <p class="text">{{link-to classroom.name 'classrooms.show' classroom}}</p>
+    {{/each}}
+  </div>
+  <div class="pure-u-1-8">
+    <p class="label">Teachers</p>
+    {{#each classroom in model.classrooms}}
+      <p class="text">{{link-to classroom.teacher.fullName 'teachers.show' classroom.teacher}}</p>
+    {{/each}}
+  </div>
+</div>
+<div class="pure-g">
+  <div class="pure-u-1-1">
+    <div class="link-tos">
+      {{link-to "Edit school" "schools.edit" model}}
+    </div>
+    <div class="link-tos">
+      {{link-to "List of all schools" "schools.index"}}
+    </div>
+  </div>
+</div>

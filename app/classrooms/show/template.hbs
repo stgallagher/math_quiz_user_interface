@@ -1,0 +1,41 @@
+<div class="pure-g">
+  <div class="pure-u-1-6">
+    <div class="image-container">
+      <div class="image">
+        <img src="assets/images/person.png" alt="no photo available" class="w100px" />
+        <div class="link-tos">
+          {{link-to "Edit classroom" "classrooms.edit" model}}
+        </div>
+        <div class="link-tos">
+          {{link-to "List of all classrooms" "classrooms.index"}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pure-u-1-8">
+    <div class="data">
+      <div class="info">
+        <div>
+          <p class="label">Name</p>
+          <p class="text">{{model.name}}</p>
+          <p class="label">Teacher</p>
+          {{#with model.teacher as teacher}}
+          <p class="text">{{teacher.fullName}}</p>
+          {{/with}}
+          <p class="label">School</p>
+          {{#with model.school as school}}
+          <p class="text">{{school.name}}</p>
+          {{/with}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pure-u-1-4">
+    <div class="students-grid-heading">Students</div>
+    <div class="students-grid">
+      {{#each student in model.students}}
+        <div class="student-tile">{{student.fullName}}</div>
+      {{/each}}
+    </div>
+  </div>
+</div>

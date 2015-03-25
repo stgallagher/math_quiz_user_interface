@@ -1,0 +1,27 @@
+<div class="link-tos">
+  {{link-to 'Create a new quizSession' 'quizSessions.new'}}
+</div>
+<table class="pure-table pure-table-striped">
+  <thead>
+    <th>Date</th>
+    <th>Time Taken</th>
+    <th>Correct</th>
+    <th>Wrong</th>
+    <th>Unanswered</th>
+    <th>Score</th>
+    <th></th>
+  </thead>
+  <tbody>
+    {{#each quizSession in model}}
+      <tr>
+        <td class="resource-names">{{link-to quizSession.formattedDate 'quizSessions.show' quizSession}}</td>
+        <td class="resource-names">{{quizSession.timeTaken}}</td>
+        <td class="resource-names">{{quizSession.correct}}</td>
+        <td class="resource-names">{{quizSession.wrong}}</td>
+        <td class="resource-names">{{quizSession.unanswered}}</td>
+        <td class="resource-names">{{quizSession.score}}</td>
+        <td><a href="#" {{action "delete" quizSession}}>Delete</a></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
