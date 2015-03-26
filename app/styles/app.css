@@ -7,6 +7,7 @@
 }
 
 /* My styles */
+
 .menu-item-icon {
   width: 20px;
   color: darkgrey;
@@ -17,18 +18,26 @@
   display: inline-block;
 }
 #header {
-  height: 100px;
-  background-color: darkgrey;
   border-bottom: 1px solid black;
 }
+.screen-line {
+  height: 10px;
+}
+.black {
+  background-color: black;
+}
+.darkgrey {
+  background-color: darkgrey;
+}
+.lightgrey {
+  background-color: lightgrey;
+}
 #content {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   min-height: 500px;
 }
 #footer {
-  height: 1000px;
-  background-color: darkgrey;
   border-top: 1px solid black;
 }
 a {

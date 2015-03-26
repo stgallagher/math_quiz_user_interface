@@ -1,17 +1,4 @@
 <div class="pure-g">
-  <div class="pure-u-1-6">
-    <div class="image-container">
-      <div class="image">
-        <img src="/assets/images/person.png" alt="no photo available" class="w100px" />
-        <div class="link-tos">
-          {{link-to "Edit quiz" "quizzes.edit" model}}
-        </div>
-        <div class="link-tos">
-          {{link-to "List of all quizzes" "quizzes.index"}}
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="pure-u-1-8">
     <p class="label">Level</p>
     <p class="text">{{model.level}}</p>
@@ -29,9 +16,14 @@
     {{#with problems.length as plength}}
       <p class="text">{{plength}}</p>
     {{/with}}
+    <div class="link-tos">
+      {{link-to "Edit quiz" "quizzes.edit" model}}
+    </div>
+    <div class="link-tos">
+      {{link-to "All quizzes" "quizzes.index"}}
+    </div>
   </div>
-  <div class="pure-u-5-8">
-    <p class="label">Problems</p>
+  <div class="pure-u-5-6">
     {{#each problem in model.problems}}
       <div class="problem-container-sm">
         <div class="problem-frame-sm">
