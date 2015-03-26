@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
       var _this = this;
 
       this.get('model').save().then(function(teacher) {
-        _this.transitiontoroute('teachers.show', teacher);
+        _this.transitionToRoute('teachers.show', teacher);
       },
       function () {
           console.log("teacher save failed.");
@@ -16,7 +16,7 @@ export default Ember.Controller.extend({
       return false;
     },
     cancel: function() {
-      this.transitiontoroute('teachers');
+      this.transitionToRoute('teachers');
 
       return false;
     }

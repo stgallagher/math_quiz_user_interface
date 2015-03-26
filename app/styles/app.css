@@ -84,6 +84,9 @@ a:hover {
   margin: 1em 0.5em 0em;
 }
 /* problems */
+
+/* normal size */
+
 .problem-set-container {
   height: 1000px;
 }
@@ -131,6 +134,58 @@ a:hover {
   margin-top: 5px;
   margin-left: 15px;
 }
+/* small size */
+
+.problem-set-container-sm {
+  height: 500px;
+}
+.problem-container-sm {
+  float: left;
+  width: 125px;
+  display: inline-block;
+}
+.problem-set-container-sm a {
+  color: black;
+}
+.problem-set-container-sm a:hover {
+  color: darkgrey;
+}
+.problem-frame-sm {
+  height: 150px;
+  width: 110px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 33px;
+  margin: 5px;
+}
+.given-problem-sm {
+  height: 80px;
+  width: 65px;
+  margin-top: 22px;
+  margin-left: 22px;
+}
+.problem-top-sm {
+  height: 25px;
+  width: 75px;
+  margin-left: 2px;
+  padding-top: 5px;
+}
+.problem-bottom-sm {
+  height: 35px;
+  width: 75px;
+  margin-left: -5px;
+  padding-top: 12px;
+  border-bottom: 1px solid black;
+}
+.answer-problem-sm {
+  height: 28px;
+  width: 95px;
+  margin-top: 3px;
+  margin-left: 7px;
+}
+
+/* students grid */
+
 .students-grid-heading {
   text-align: center;
   height: 30px;
@@ -144,6 +199,13 @@ a:hover {
   padding: 10px;
   margin-top: 10px;
   text-align: center;
+}
+.students-grid a {
+  color: #242424;
+  text-decoration: none;
+}
+.students-grid a:hover {
+  color: lightgrey;
 }
 .student-tile {
   width: 150px;

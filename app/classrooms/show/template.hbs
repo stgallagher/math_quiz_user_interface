@@ -20,11 +20,11 @@
           <p class="text">{{model.name}}</p>
           <p class="label">Teacher</p>
           {{#with model.teacher as teacher}}
-          <p class="text">{{teacher.fullName}}</p>
+          <p class="text">{{link-to teacher.fullName 'teachers.show' teacher}}</p>
           {{/with}}
           <p class="label">School</p>
           {{#with model.school as school}}
-          <p class="text">{{school.name}}</p>
+          <p class="text">{{link-to school.name 'schools.show' school}}</p>
           {{/with}}
         </div>
       </div>
@@ -34,7 +34,7 @@
     <div class="students-grid-heading">Students</div>
     <div class="students-grid">
       {{#each student in model.students}}
-        <div class="student-tile">{{student.fullName}}</div>
+        <div class="student-tile">{{link-to student.fullName 'students.show' student}}</div>
       {{/each}}
     </div>
   </div>
